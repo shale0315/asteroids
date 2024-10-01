@@ -17,6 +17,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill((0,0,0))
+        player_object.update(dt)
         player_object.draw(screen)
         pygame.display.flip()
         dt = timeclock.tick(60) / 1000
